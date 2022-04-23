@@ -155,6 +155,18 @@ class App extends Component {
     //alert(response[0])
     this.setState({ proposal0: response[0] });  
 
+    const response2 = (await contract.methods.getOneProposal(1).call({ from: accounts[0] }));
+    this.setState({ proposal1: response2[0] });  
+
+    const response3 = (await contract.methods.getOneProposal(2).call({ from: accounts[0] }));
+    this.setState({ proposal2: response3[0] });  
+
+    const response4 = (await contract.methods.getOneProposal(3).call({ from: accounts[0] }));
+    this.setState({ proposal3: response4[0] });  
+
+    const response5 = (await contract.methods.getOneProposal(4).call({ from: accounts[0] }));
+    this.setState({ proposal4: response5[0] });  
+
     this.setState({showProposals : true});
 
   }
