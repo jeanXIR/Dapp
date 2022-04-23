@@ -51,7 +51,7 @@ contract Voting is Ownable {
     }
 
     // Proposal[] proposalsArray; 
-    Proposal[12] proposalsArray;
+    Proposal[5] proposalsArray;
     uint public numberOfProposals;
     mapping (address => Voter) voters;
 
